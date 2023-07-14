@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<style>
+    body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #e_263743_1_168909205426137148 .c {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body id='body'>
+    <div class="galeria">
+        <button id="prev" onclick="prevSlide()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M560.615-253.847 333.847-480.615l226.768-227.153 32.615 32.614-194.154 194.539L593.23-286.462l-32.615 32.615Z"/></svg>
+        </button>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-835b039144c4b9982068fc256b171374.jpg"
+                            onclick="opLightbox(this, 0)" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-27290a45706c8a1eedc688b8ea8a9f80.jpg"
+                            onclick="opLightbox(this, 1)" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-63645f3996c3ca02e17024c04eeef5d5.jpg"
+                            onclick="opLightbox(this, 2)" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-d163d65a6167a4628a3ae757a88292e5.jpg"
+                            onclick="opLightbox(this, 3)" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-111a34146c6205699051f614ae6eab33.jpg"
+                            onclick="opLightbox(this, 4)" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-cb7e7e72e14b8728c873236e5198f2f9.jpg"
+                            onclick="opLightbox(this, 5)" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-29369af8d2b814c0d78005409a304f4b.jpg"
+                            onclick="opLightbox(this, 6)" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-0606e450307580e538cefd6864912c7b.jpg"
+                            onclick="opLightbox(this, 7)" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-94f20b29da0b390343a8de08a5e798f2.jpg"
+                            onclick="opLightbox(this, 8)" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-99e62ecea8965edfcee9613388a2860f.jpg"
+                            onclick="opLightbox(this, 9)" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-099488d02995e0ca92b24c982f1fdaff.jpg"
+                            onclick="opLightbox(this, 10)" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <img src="https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/29895-1f3b24626849d11b38b9934c03630ab6.jpg"
+                            onclick="opLightbox(this, 11)" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="next" onclick="nextSlide()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M536.924-480.615 342.77-675.154l32.615-32.614 226.768 227.153-226.768 226.768-32.615-32.615 194.154-194.153Z"/></svg>
+        </button>
+    </div>
+
+    <div id="lightbox">
+        <button id="prevLightbox" onclick="prevLightbox()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M560.615-253.847 333.847-480.615l226.768-227.153 32.615 32.614-194.154 194.539L593.23-286.462l-32.615 32.615Z"/></svg>
+        </button>
+        <img id="lightboxImage" src="" alt="">
+        <button id="nextLightbox" onclick="nextLightbox()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M536.924-480.615 342.77-675.154l32.615-32.614 226.768 227.153-226.768 226.768-32.615-32.615 194.154-194.153Z"/></svg>
+        </button>
+        <button style="position: absolute; top: 30px; right: 50px;" onclick="closeLightbox()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                <path
+                    d="m252.846-230.846-22-22L458-480 230.846-707.154l22-22L480-502l227.154-227.154 22 22L502-480l227.154 227.154-22 22L480-458 252.846-230.846Z" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="overlay"></div>
+
+    <script>
+        const imgsList = document.querySelectorAll('.content img');
+        var current = -1;
+
+        function prevLightbox() {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImage = document.getElementById('lightboxImage');
+
+            if (current > 0) {
+                current = current - 1;
+            }
+
+            lightboxImage.src = imgsList[current].src;
+        }
+
+        function nextLightbox() {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImage = document.getElementById('lightboxImage');
+
+            if (current < 11) {
+                current = current + 1;
+            }
+
+            lightboxImage.src = imgsList[current].src;
+        }
+
+        function opLightbox(image, index) {
+
+
+            current = index;
+
+            document.body.style.setProperty('--height', `${(image.getBoundingClientRect().height)}px`);
+
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImage = document.getElementById('lightboxImage');
+            var animacao = document.querySelector('#imgAnimacao');
+            lightbox.style.display = 'flex';
+
+            lightboxImage.src = image.src;
+
+            var leftInicial = Math.trunc(image.getBoundingClientRect().left) + 151;
+            var topInicial = Math.trunc(image.getBoundingClientRect().top) + 100;
+
+            var offsetPath = `M${leftInicial} ${topInicial}L${window.innerWidth / 2} ${window.innerHeight / 2}`;
+
+            document.body.style.setProperty('--offset-path', offsetPath.toString());
+
+            const overlay = document.querySelector('.overlay');
+
+            var im = image.cloneNode();
+            overlay.appendChild(im);
+            im.style.offset = `path("${offsetPath}") 0deg`;
+            overlay.style.display = 'block';
+
+            const slide = image.parentElement.parentElement;
+            slide.style.overflow = 'visible';
+
+            setTimeout(function () {
+                lightbox.style.opacity = '1';
+            }, 1500);
+
+            if (image.width > image.height) {                 // imagem em paisasem
+                if (window.innerWidth < window.innerHeight) { // tela em retrato
+                    //alert('P-R');
+                    im.classList.add('zoom-w');
+                } else {                                      // tela em paisagem
+                    //alert('P-P');
+                    im.classList.add('zoom-h');
+                }
+            } else {                                          // imagem em retrato
+                if (window.innerWidth < window.innerHeight) { // tela em retrato
+                    //alert('R-R');
+                    im.classList.add('zoom-w');
+                } else {                                      // tela em paisagem
+                    //alert('R-P');
+                    im.classList.add('zoom-h');
+                }
+            }
+
+            setTimeout(function () {
+                overlay.innerHTML = '';
+                overlay.style.display = 'none';
+            }, 1500);
+
+
+        }
+
+        function closeLightbox() {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImage = document.getElementById('lightboxImage');
+            lightbox.style.opacity = '0';
+            lightbox.style.display = 'none';
+            lightboxImage.classList.remove('zoom-w');
+            lightboxImage.classList.remove('zoom-h');
+        }
+
+        (function () {
+            const slider = document.querySelector('.slider');
+            const slides = slider.querySelector('.slides');
+            const slideWidth = slides.querySelector('.slide').clientWidth; // Largura de cada slide
+            const slideCount = slides.childElementCount;
+            let currentIndex = 0;
+            let currentTranslate = 0;
+
+            var fim = false;
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slideCount;
+                currentTranslate = currentTranslate + 342;
+                slides.style.transform = `translateX(-${(currentTranslate)}px)`;
+                if (currentIndex >= 11 && window.innerWidth < 1200 && window.innerWidth > 875) {
+                    currentTranslate = 0;
+                    slides.style.transform = `translateX(0px)`;
+                    currentIndex = 0;
+                } else if (currentIndex >= 10 && window.innerWidth >= 1200) {
+                    currentTranslate = 0;
+                    slides.style.transform = `translateX(0px)`;
+                    currentIndex = 0;
+                } else if (currentIndex >= 11 && window.innerWidth <= 875) {
+                    if (fim == false) {
+                        fim = true;
+                    }
+                } else if (currentIndex == 0 && window.innerWidth <= 875) {
+                    if (fim == true) {
+                        currentTranslate = 0;
+                        slides.style.transform = `translateX(0px)`;
+                        currentIndex = 0;
+                    }
+                }
+            }
+
+            function prevSlide() {
+                if (currentIndex === 0) {
+                } else {
+                    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                    currentTranslate = currentTranslate - 342;
+                    slides.style.transform = `translateX(-${currentTranslate}px)`;
+                }
+            }
+
+            function loop() {
+                nextSlide();
+                setTimeout(loop, 5000);
+            }
+
+            setTimeout(() => {
+                loop();
+            }, 5000);
+
+            const nextButton = document.querySelector('#next');
+            const prevButton = document.querySelector('#prev');
+            nextButton.addEventListener('click', nextSlide);
+            prevButton.addEventListener('click', prevSlide);
+
+            const box = document.querySelector('#e_237864_1_27872 .e_caixa');
+            const gal = document.querySelector('.galeria');
+
+            box.appendChild(gal);
+            gal.style.display = 'flex'
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+
+body {
+    --img-width: 302px;
+}
+
+#e_263743_1_168909205426137148 .c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(14, 14, 14, 0.67);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#lightboxImage {
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+button {
+    background-color: transparent;
+    /* Green */
+    border: none;
+    fill: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 70px;
+    height: auto;
+    top: 57px;
+    padding: 0px;
+}
+
+#next {
+    position: relative;
+}
+
+#prev {
+    position: relative;
+}
+
+#nextLightbox {
+    margin-left: 10px;
+}
+
+button svg {
+    width: 70px;
+    height: auto;
+}
+
+#prevLightbox {
+    margin-right: 10px;
+}
+
+button img {
+    width: 50px;
+    height: auto;
+}
+
+.slider {
+    width: 1029px;
+    min-width: 342px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+    transform: translateY(50px);
+    /*background-color: aqua;*/
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider .slide {
+    width: var(--img-width);
+    height: auto;
+    margin: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a7a7a752;
+}
+
+.content img {
+    max-width: var(--img-width);
+    max-height: auto;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+
+    /* 2 slides */
+    .slider {
+        width: 680px;
+        height: auto;
+        position: relative;
+        transform: translateY(50px);
+    }
+}
+
+@media (max-width: 875px) {
+
+    /* 1 slide */
+    .slider {
+        width: 345px;
+        height: auto;
+        position: relative;
+        transform: translateY(50px);
+    }
+
+    .galeria {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        top: 66px !important;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+    background: rgba(14, 14, 14, 0.67);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+@media (max-width: 800px) {
+    .slider {
+        width: 340px;
+        height: auto;
+        position: relative;
+        transform: translateY(50px);
+    }
+
+    .galeria {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        top: 66px !important;
+    }
+}
+
+@media (max-width: 640px) {
+
+    /* 1 slider menor*/
+    .slider {
+        width: var(--img-width);
+        height: auto;
+        position: relative;
+        transform: translateY(50px);
+    }
+
+    .galeria {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        top: 66px !important;
+    }
+
+    button img {
+        width: 30px;
+        height: auto;
+    }
+
+    #nextLightbox {
+        position: relative;
+        margin-left: 2px;
+        left: -30px;
+        top: 9px !important;
+    }
+
+    #prevLightbox {
+        position: relative;
+        margin-right: 2px;
+        right: -30px;
+        z-index: 1;
+        top: 9px !important;
+    }
+
+    #next {
+        margin-left: 0px;
+        left: -30px;
+    }
+
+    #prev {
+        margin-right: 0px;
+        right: -30px;
+        z-index: 1;
+    }
+}
+
+.zoom-w {
+    position: fixed;
+    height: 200px;
+    width: auto;
+    z-index: 9999;
+    animation: zoom-w 0.5s linear forwards;
+}
+
+@keyframes zoom-w {
+    0% {
+        height: auto;
+        width: 300px;
+        offset-distance: 0%;
+    }
+
+    100% {
+        height: auto;
+        width: 80vw;
+        offset-distance: 100%;
+    }
+}
+
+.zoom-h {
+    position: fixed;
+    height: auto;
+    width: 300px;
+    z-index: 9999;
+    animation: zoom-h 0.5s linear forwards;
+}
+
+@keyframes zoom-h {
+    0% {
+        width: auto;
+        height: 200px;
+        offset-distance: 0%;
+    }
+
+    100% {
+        width: auto;
+        height: 80vh;
+        offset-distance: 100%;
+    }
+}
